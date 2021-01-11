@@ -9,7 +9,7 @@
     * `Src`
         * Name spacing and package mangagement
 
-### Go Commands
+### Initial Go Commands
 * `go fmt`: auto formatting your code
     * `go fmt ./...`: format recursively through a directory
 * `go run`: Builds and runs code, similar to `python app.py` or whatever
@@ -34,3 +34,19 @@
         * puts the executable in `worspace/pkg`
             * `$GOPATH/pkg`
         * majes it an archived file
+
+### Managing Go Modules
+* `go mod init`
+    * creates new module, initializing the `go.mod` that describes it
+* `go build, go test`
+    * and other package-building commands adds new dependencies to `go.mod`
+* `go list -m all`
+    * prints all of the current modules dependencies (both direct and indirect)
+    * `go list -m versions <package_name>`
+        * list all the available versions of package
+* `go get`
+    * changes the required version of dependency or adds new dependency
+    * `go get <package_name>@<version_number>`
+        * specify the specific version you want
+* `go mod tidy`
+    * removes any unused dependency from module
