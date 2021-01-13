@@ -1,4 +1,4 @@
-# Section 5 Notes
+# Ninja Level 1
 
 ### Exercise #1
 * Using short declaration, assign the values to variables with identifiers `x`, `y`, and `z`.
