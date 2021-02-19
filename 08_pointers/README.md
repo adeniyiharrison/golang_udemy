@@ -18,7 +18,7 @@ fmt.Println(*b)
 * `int` is a completely different type as `*int`
     * int vs pointer to an int
 * For a value of `*int` type, I can convert it back to `int` by using the following syntax
-    * `*b` == `int`
+    * type(`*b`) == `int`
 * Not sure why you would want to do this but
     * `*&a` == `int`
     * Turn `int` into `pointer`, then dereference it with `*` to turn it back to `int`
