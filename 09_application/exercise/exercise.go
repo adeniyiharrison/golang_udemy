@@ -166,7 +166,7 @@ func p5(j *[]byte) {
 	for i, v := range employeeStructArray {
 		fmt.Printf("Employee #%d\n", i)
 		fmt.Printf(
-			"-- First: %s, Last: %s, Age: %d\n",
+			"--i First: %s, Last: %s, Age: %d\n",
 			v.FirstName, v.LastName, v.Age,
 		)
 	}
