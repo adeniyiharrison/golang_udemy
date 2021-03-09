@@ -82,6 +82,35 @@ Printing the arguement: Run this one first!
 Printing the arguement: Run this last
 ```
 * Used to ensure a specific function run at the very end of a process. Such as closing files after a function that opens it
+* A deffered function's arguements are evaluated when the defer statement is evaluated
+```
+// this will return 0: 
+func a() {
+    i := 0
+    defer fmt.Println(i)
+    i++
+    return
+}
+```
+* Deferred function calls are executed in LIFO (last in first out) order after the surrounding function returns
+```
+// this function prints "3210":
+func b() {
+    for i := 0; i < 4; i++ {
+        defer fmt.Print(i)
+    }
+}
+```
+* Deffered functions may read and assign to the returning function's named return values
+```
+// In this example, a deferred function increments the return value i after the surrounding function returns. Thus, this function returns 2:
+
+
+func c() (i int) {
+    defer func() { i++ }()
+    return 1
+}
+```
 
 ### Methods
 ```
